@@ -29,9 +29,7 @@ data = list(filter(lambda x: x[6] == "1", data))
 # Filter for zero hints
 data = list(filter(lambda x: x[11] == "0", data))
 
-print(header)
-
-with open(in_script_dir("cleaned_data.csv"), newline="") as f:
+with open(in_script_dir("cleaned_data.csv"), "w", newline="") as f:
     writer = csv.writer(f, delimiter=",")
 
     writer.writerow(header)
